@@ -3,7 +3,7 @@ WORKDIR /src
 
 # These lines copy MvcMovie.csproj project files in the current directory
 # and then restore for the specified runtime, using -r.
-COPY ["MvcMovie.csproj", "./"]
+COPY ["./app/MvcMovie.csproj", "./"]
 RUN dotnet restore "MvcMovie.csproj" -r linux-musl-arm64
 
 # Build dotnet project and publishes the application and its dependencies to a folder for deployment to a hosting system.
