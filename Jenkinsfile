@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script{
-                        docker.withRegistry('https://280437196251.dkr.ecr.us-east-1.amazonaws.com/movie-app', 'ecr:us-east-1:ecr:us-east-1:aws-credentials') {
+                        docker.withRegistry('https://243764803067.dkr.ecr.us-west-2.amazonaws.com/movie-app-repo', 'ecr:us-west2-1:aws-credentials-west') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                     // docker.image("movie-app").push()
